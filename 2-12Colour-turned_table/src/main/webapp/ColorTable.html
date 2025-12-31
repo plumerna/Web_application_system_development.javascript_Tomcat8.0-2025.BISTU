@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>变色表格示例</title>
+	<style>
+		table{
+			margin: 0 auto;
+			width: 200px; 
+			border: 1px solid #000;
+			border-spacing: 1px;
+			border-collapse: seperate;
+		}
+		tr{
+			text-align: center;
+		}
+		th{
+			padding: 1px;
+			border: 1px solid #000;
+		}
+	</style>
+	<script>
+		function changeColor(row){
+			document.getElementById(row).style.backgroundColor='#CCCCFF';
+		}
+		function resetColor(row){
+			document.getElementById(row).style.backgroundColor='';
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr><th>学校</th>	<th>专业</th>	<th>人数</th></tr>
+		<tr id="row1"
+			onMouseOver="changeColor('row1')" onMouseOut="resetColor('row1')">
+			<th>北大</th>	<th>法律</th>	<th>2000</th></tr>
+		<tr id="row2"
+			onMouseOver="changeColor('row2')" onMouseOut="resetColor('row2')">
+			<th>清华</th>	<th>计算机</th>	<th>5000</th></tr>
+		<tr id="row3"
+			onMouseOver="changeColor('row3')" onMouseOut="resetColor('row3')">
+			<th>人大</th>	<th>经济</th>	<th>6000</th></tr>
+	</table>
+</body>
+</html>
