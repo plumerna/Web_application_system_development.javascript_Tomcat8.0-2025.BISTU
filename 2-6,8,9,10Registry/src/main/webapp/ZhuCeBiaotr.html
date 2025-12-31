@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>注册页面</title>
+<style>
+	h2{
+	color: orange;
+	text-align: center;
+	}
+	h4{
+	text-align: center;
+	}
+	span{
+	color: blue;
+	border: 1px;
+	}
+	table {
+		margin: 0 auto;
+		border-collapse: separate;
+		border-spacing: 10px; 
+	}
+</style>
+</head>
+<body>
+	<h2 align="center">填写注册信息</h2>
+		<form name="stu" action="">
+			<table>
+				<tr><td>用户名：</td>
+					<td><input type="text" name="stuName" placeholder="此处输入用户名"></td>
+					<td><span>用户名由字母开头，后跟字母、数字或下划线</span></td></tr>
+					
+				<tr><td>密码：</td>
+					<td><input type="password" name="stuPwd" placeholder="此处输入密码"></td>
+					<td><span>设置登录密码，至少6位</span></td></tr>
+					
+				<tr><td>确认密码：</td>
+					<td><input type="password" name="stuPwdConfirm" placeholder="两次密码需保持一致"></td>
+					<td><span>请再次输入你的密码</span></td></tr>
+					
+				<tr><td>性别：</td>
+					<td><input type="radio" name="stuGen" checked="checked">女
+						<input type="radio" name="stuGen">男</td>
+					<td><span>请选择你的性别</span></td></tr>
+					
+				<tr><td>出生日期：</td>
+					<td><input type="date" name="birthdate"></td>
+					<td><span>点击图标选择日期</span></td></tr>
+					
+				<tr><td>专业：</td>
+					<td><select name="major">
+						<option value="default">*请选择...</option>
+						<option value="computer_science">计算机科学与技术</option>
+						<option value="software_engineering">软件工程</option>
+						<option value="network_engineering">网络工程</option>
+						<option value="information_security">信息安全</option>
+					</select></td>
+					<td><span>请选择专业</span></td></tr>
+					
+				<tr><td>特长：</td>
+					<td><input type="checkbox" name="PE">体育 
+					<input type="checkbox" name="art">艺术 
+					<input type="checkbox" name="others">其他</td>
+					<td><span>点击选项前方勾选框，可多选</span></td></tr>
+					
+				<tr><td>邮箱地址：</td>
+					<td><input type="email" name="stuEmail" placeholder="...@email.com"></td>
+					<td><span>请填写您的常用邮箱，可以用此邮箱找回密码</span></td></tr>
+					
+				<tr><td>基本情况：</td>
+					<td colspan="2"><textarea name="intro" rows="5" cols="30"></textarea></td></tr>
+			</table>
+			
+			<h4><input type="checkbox" name="agreement">我已经仔细阅读并同意接受用户使用协议。</h4>
+			<p align="center"><input type="submit" value="确认" onClick="validate()"><input type="reset" value="重填"></p>
+		</form>
+	<script src="judgement.js"></script>
+</body>	
+</html>
